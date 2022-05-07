@@ -2,7 +2,6 @@ from black import out
 import cv2
 import numpy as np
 import playsound
-import smtplib
 
 
 fire_reported = 0
