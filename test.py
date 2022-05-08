@@ -12,7 +12,7 @@ def play_audio():
     playsound.playsound('alarm.mp3', True)
 
 
-video=cv2.VideoCapture(1)
+video=cv2.VideoCapture(0)
 
 while True:
     ret, frame = video.read()
@@ -31,7 +31,7 @@ while True:
     
     size = cv2.countNonZero(mask)
 
-    if int(size) > 20000:
+    if int(size) > 10000:
         print('Fire detected')
         fire_reported = fire_reported + 1
         if fire_reported >= 1:
