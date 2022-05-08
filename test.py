@@ -31,7 +31,7 @@ while True:
     
     size = cv2.countNonZero(mask)
 
-    if int(size) > 10000:
+    if int(size) > 100000:
         print('Fire detected')
         fire_reported = fire_reported + 1
         if fire_reported >= 1:
