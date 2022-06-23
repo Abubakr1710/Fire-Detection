@@ -31,7 +31,7 @@ while True:
     
     size = cv2.countNonZero(mask)
 
-    if int(size) > 1000:
+    if int(size) > 10000:
         print('Fire detected')
         fire_reported = fire_reported + 1
         if fire_reported >= 1:
@@ -43,7 +43,8 @@ while True:
 
     if ret == False:
         break
-    cv2.imshow("Output", output)
+    #cv2.imshow("Output", output)
+    cv2.imshow('Normal', frame)
 
     if cv2. waitKey(1)& 0xFF == ord("q"):
         break
